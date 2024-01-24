@@ -1,4 +1,4 @@
-# ERC-4337 Execution Client Builder
+# ERC-4337 Execution Clients
 
 A repository for building Geth and other EVM execution clients with native ERC-4337 tracers.
 
