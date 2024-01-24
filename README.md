@@ -40,6 +40,10 @@ Use the following scripts to build a client from source with native ERC-4337 tra
 
 **All binaries will be available in the `./builds/$CLIENT` directory.**
 
+## Tracer development
+
+See the documentation on [Geth's custom EVM tracers](https://geth.ethereum.org/docs/developers/evm-tracing/custom-tracer) for details in setting up a dev environment for tracer iterations.
+
 ## License
 
 Distributed under the GPL-3.0 License. See [LICENSE](./LICENSE) for more information.
