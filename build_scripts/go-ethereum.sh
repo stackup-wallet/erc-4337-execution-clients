@@ -27,6 +27,7 @@ if [ $ONLY_SETUP -eq 0 ]; then
     echo "Move builds to the root level build directory..."
     mkdir -p $build_output_dir
     mv ./build/bin/geth $build_output_dir/geth
+    chmod +x $build_output_dir/geth
 
     echo "Clean up client directory..."
     git reset --hard
