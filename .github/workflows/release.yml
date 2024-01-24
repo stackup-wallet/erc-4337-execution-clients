@@ -9,7 +9,6 @@ on:
         type: choice
         options:
           - go-ethereum
-  pull_request:
 
 jobs:
   binaries:
