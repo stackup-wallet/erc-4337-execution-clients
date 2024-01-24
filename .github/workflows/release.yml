@@ -38,7 +38,10 @@ jobs:
         run: ./build_scripts/${{inputs.client}}.sh
 
       - name: "Tar build"
-        run: tar -cvf ${{inputs.client}}-${{env.CLIENT_GIT_TAG}}-${{matrix.os}}.tar ./builds/${{inputs.client}}
+        run: |
+          cd ./builds/${{inputs.client}} && \
+          tar -cvf ../../${{inputs.client}}-${{env.CLIENT_GIT_TAG}}-${{matrix.os}}.tar * && \
+          cd ../../
 
       - uses: actions/upload-artifact@v4
         with:
