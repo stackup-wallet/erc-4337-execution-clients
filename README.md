@@ -21,7 +21,7 @@ Note that this repository uses git submodules to build execution clients based o
 git clone --recurse-submodules https://github.com/stackup-wallet/erc-4337-execution-client-builder.git
 ```
 
-### Pre-requisites
+### Prerequisites
 
 Most clients will require the following system dependencies to successfully compile:
 
