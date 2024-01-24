@@ -2,28 +2,44 @@
 
 A repository for building Geth and other EVM execution clients with native ERC-4337 tracers.
 
-## Git Clone
+## Pre-built docker images
 
-The repository uses git submodules to build execution clients from source at a pinned release version. Make sure to include the `--recurse-submodules` flag in your git clone command.
+Pre-built docker images are available in [releases](https://github.com/stackup-wallet/erc-4337-execution-client-builder/releases) for the following platforms:
 
-## Prerequisites
-
-- Go 1.20 or later
-- Docker
+- Docker linux/amd64
+- Docker linux/arm64
 
 ## Building binaries from source
 
+Alternatively, you can build all binaries from source by cloning this repository.
+
+### Git clone
+
+Note that this repository uses git submodules to build execution clients based on a pinned release version. Make sure to include the `--recurse-submodules` flag in your git clone command.
+
+```bash
+git clone --recurse-submodules https://github.com/stackup-wallet/erc-4337-execution-client-builder.git
+```
+
+### Pre-requisites
+
+Most clients will require the following system dependencies to successfully compile:
+
+- Go 1.20
+
+### Running the build scripts
+
 Use the following scripts to build a client from source with native ERC-4337 tracers included.
 
-`$CLIENT` can be replaced with one of the currently supported clients:
+`$CLIENT` can be replaced with one of the currently supported execution clients:
 
 - `go-ethereum`
 
 ```bash
-$ ./build_scripts/$CLIENT.sh
+./build_scripts/$CLIENT.sh
 ```
 
-**All binaries will be available in `./builds/$CLIENT` directory.**
+**All binaries will be available in the `./builds/$CLIENT` directory.**
 
 ## License
 
