@@ -23,6 +23,8 @@ Use the following scripts to build a client from source with native ERC-4337 tra
 $ ./build_scripts/$CLIENT.sh
 ```
 
+**All binaries will be available in `./builds/$CLIENT` directory.**
+
 ## License
 
 Distributed under the GPL-3.0 License. See [LICENSE](./LICENSE) for more information.
