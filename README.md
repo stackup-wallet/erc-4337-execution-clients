@@ -42,7 +42,7 @@ Use the following scripts to build a client from source with native ERC-4337 tra
 
 ## Tracer development
 
-See the documentation on [Geth's custom EVM tracers](https://geth.ethereum.org/docs/developers/evm-tracing/custom-tracer) for details in setting up a dev environment for tracer iterations.
+See the documentation on [Geth's custom EVM tracers](https://geth.ethereum.org/docs/developers/evm-tracing/custom-tracer) for details on setting up a dev environment for tracer iterations.
 
 ## License
 
