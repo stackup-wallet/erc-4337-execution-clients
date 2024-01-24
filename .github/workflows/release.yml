@@ -14,7 +14,8 @@ jobs:
   binaries:
     strategy:
       matrix:
-        os: ["ubuntu-latest", "macos-latest"]
+        # TODO: Build and distribute for macOS
+        os: ["ubuntu-22.04"]
     runs-on: ${{matrix.os}}
     steps:
       - name: Checkout
