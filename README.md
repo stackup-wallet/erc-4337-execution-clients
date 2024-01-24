@@ -4,10 +4,9 @@ A repository for building Geth and other EVM execution clients with native ERC-4
 
 ## Pre-built docker images
 
-Pre-built docker images are available in [releases](https://github.com/stackup-wallet/erc-4337-execution-client-builder/releases) for the following platforms:
+Pre-built docker images are available at the following repositories. The tags correlate to the execution client's commit ref that the tracer was compiled with.
 
-- linux/amd64
-- linux/arm64
+- [go-ethereum](https://hub.docker.com/repository/docker/stackupwallet/go-ethereum)
 
 ## Building binaries from source
 
