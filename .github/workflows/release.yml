@@ -35,7 +35,7 @@ jobs:
           cd ..
 
       - name: Build client
-        run: ./build_scripts/${{inputs.client}}
+        run: ./build_scripts/${{inputs.client}}.sh
 
       - uses: actions/upload-artifact@v4
         with:
@@ -51,7 +51,7 @@ jobs:
           submodules: true
 
       - name: Setup client directory
-        run: ./build_scripts/${{inputs.client}} --only-setup
+        run: ./build_scripts/${{inputs.client}}.sh --only-setup
 
       - name: Get client version
         run: |
