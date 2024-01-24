@@ -30,7 +30,8 @@ jobs:
       - name: Get client version
         run: |
           cd ./${{inputs.client}} && \
-          echo "CLIENT_GIT_TAG=$(git describe --tags)" >> $GITHUB_ENV
+          echo "CLIENT_GIT_TAG=$(git describe --tags)" >> $GITHUB_ENV && \
+          cd ..
 
       - name: Build client
         run: ./build_scripts/${{inputs.client}}
@@ -49,12 +50,13 @@ jobs:
           submodules: true
 
       - name: Setup client directory
-        run: ./build_scripts/$${{inputs.client}} --only-setup
+        run: ./build_scripts/${{inputs.client}} --only-setup
 
       - name: Get client version
         run: |
           cd ./${{inputs.client}} && \
-          echo "CLIENT_GIT_TAG=$(git describe --tags)" >> $GITHUB_ENV
+          echo "CLIENT_GIT_TAG=$(git describe --tags)" >> $GITHUB_ENV && \
+          cd ..
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
