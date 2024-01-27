@@ -33,6 +33,7 @@ Use the following scripts to build a client from source with native ERC-4337 tra
 `$CLIENT` can be replaced with one of the currently supported execution clients:
 
 - `go-ethereum`
+- `bor` (Polygon PoS)
 
 ```bash
 ./build_scripts/$CLIENT.sh
