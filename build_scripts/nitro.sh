@@ -28,5 +28,5 @@ if [ $ONLY_SETUP -eq 0 ]; then
     git clean -df
 else
     echo 'To build, run: "docker build ./nitro --tag nitro-node"'
-    echo 'To reset client directory, run : "./build_scripts/nitro.sh --cleanup"'
+    echo 'To reset client directory, run : "./build_scripts/nitro.sh"'
 fi
