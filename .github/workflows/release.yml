@@ -33,25 +33,22 @@ jobs:
       - name: Setup client directory
         run: ./build_scripts/${{inputs.client}}.sh --only-setup
 
-      - name: check tag
-        run: echo "The current tag of the submodule is ${{env.CLIENT_GIT_TAG}}"
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
 
-      # - name: Set up QEMU
-      #   uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      # - name: Set up Docker Buildx
-      #   uses: docker/setup-buildx-action@v3
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{secrets.DOCKERHUB_USERNAME}}
+          password: ${{secrets.DOCKERHUB_TOKEN}}
 
-      # - name: Login to Docker Hub
-      #   uses: docker/login-action@v3
-      #   with:
-      #     username: ${{secrets.DOCKERHUB_USERNAME}}
-      #     password: ${{secrets.DOCKERHUB_TOKEN}}
-
-      # - name: Build and push
-      #   uses: docker/build-push-action@v5
-      #   with:
-      #     context: ./${{inputs.client}}
-      #     platforms: linux/amd64,linux/arm64
-      #     push: true
-      #     tags: stackupwallet/${{inputs.client}}:${{env.CLIENT_GIT_TAG}}
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: ./${{inputs.client}}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: stackupwallet/${{inputs.client}}:${{env.CLIENT_GIT_TAG}}
