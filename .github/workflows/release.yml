@@ -20,18 +20,18 @@ jobs:
         with:
           submodules: true
 
-      - name: Recursively fetch all submodules
-        run: git submodule update --init --recursive
-
-      - name: Setup client directory
-        run: ./build_scripts/${{inputs.client}}.sh --only-setup
-
       - name: Get client version
         run: |
           cd ./${{inputs.client}} && \
           git fetch --tags && \
           echo "CLIENT_GIT_TAG=$(git describe --tags)" >> $GITHUB_ENV && \
           cd ..
+
+      - name: Recursively fetch all submodules
+        run: git submodule update --init --recursive
+
+      - name: Setup client directory
+        run: ./build_scripts/${{inputs.client}}.sh --only-setup
 
       - name: check tag
         run: echo "The current tag of the submodule is ${{env.CLIENT_GIT_TAG}}"
