@@ -27,11 +27,12 @@ jobs:
       - name: Get client version
         run: |
           cd ./${{inputs.client}} && \
+          git fetch --tags && \
           echo "CLIENT_GIT_TAG=$(git describe --tags)" >> $GITHUB_ENV && \
           cd ..
 
       - name: check tag
-        run: echo $${{env.CLIENT_GIT_TAG}}
+        run: echo "The current tag of the submodule is ${{env.CLIENT_GIT_TAG}}"
 
       # - name: Set up QEMU
       #   uses: docker/setup-qemu-action@v3
