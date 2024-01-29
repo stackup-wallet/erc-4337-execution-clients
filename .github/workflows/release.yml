@@ -28,7 +28,7 @@ jobs:
           cd ..
 
       - name: Recursively fetch all submodules
-        run: git submodule update --init --recursive
+        run: git submodule update --init --recursive --force
 
       - name: Setup client directory
         run: ./build_scripts/${{inputs.client}}.sh --only-setup
