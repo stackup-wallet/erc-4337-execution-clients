@@ -18,10 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
-
-      - name: Setup client directory
-        run: ./build_scripts/${{inputs.client}}.sh --only-setup
+          submodules: true
 
       - name: Get client version
         run: |
@@ -29,6 +26,12 @@ jobs:
           git fetch --tags && \
           echo "CLIENT_GIT_TAG=$(git describe --tags)" >> $GITHUB_ENV && \
           cd ..
+
+      - name: Recursively fetch all submodules
+        run: git submodule update --init --recursive --force
+
+      - name: Setup client directory
+        run: ./build_scripts/${{inputs.client}}.sh --only-setup
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
