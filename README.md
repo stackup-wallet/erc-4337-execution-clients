@@ -7,6 +7,7 @@ A repository for building Geth and other EVM execution clients with native ERC-4
 Pre-built docker images are available at the following repositories. The tags correlate to the execution client's commit ref that the tracer was compiled with.
 
 - [go-ethereum](https://hub.docker.com/repository/docker/stackupwallet/go-ethereum)
+- [nitro](https://hub.docker.com/r/stackupwallet/nitro)
 
 ## Building binaries from source
 
@@ -34,6 +35,7 @@ Use the following scripts to build a client from source with native ERC-4337 tra
 
 - `go-ethereum`
 - `bor` (Polygon PoS)
+- `nitro` (Arbitrum)
 
 ```bash
 ./build_scripts/$CLIENT.sh

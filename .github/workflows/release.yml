@@ -9,6 +9,7 @@ on:
         type: choice
         options:
           - go-ethereum
+          - nitro
 
 jobs:
   docker:
@@ -17,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive
 
       - name: Setup client directory
         run: ./build_scripts/${{inputs.client}}.sh --only-setup

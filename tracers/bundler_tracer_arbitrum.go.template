@@ -1,0 +1,19 @@
+package native
+
+import (
+	"math/big"
+
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/core/vm"
+)
+
+func (*bundlerCollector) CaptureArbitrumTransfer(
+	env *vm.EVM,
+	from, to *common.Address,
+	value *big.Int,
+	before bool,
+	purpose string,
+) {
+}
+func (*bundlerCollector) CaptureArbitrumStorageGet(key common.Hash, depth int, before bool)        {}
+func (*bundlerCollector) CaptureArbitrumStorageSet(key, value common.Hash, depth int, before bool) {}
