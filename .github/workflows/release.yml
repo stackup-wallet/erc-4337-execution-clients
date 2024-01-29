@@ -18,8 +18,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
-          fetch-tags: true
+          submodules: true
+
+      - name: Recursively fetch all submodules
+        run: git submodule update --init --recursive
 
       - name: Setup client directory
         run: ./build_scripts/${{inputs.client}}.sh --only-setup
