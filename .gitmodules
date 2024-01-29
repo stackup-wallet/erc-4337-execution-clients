@@ -4,3 +4,6 @@
 [submodule "bor"]
 	path = bor
 	url = https://github.com/maticnetwork/bor.git
+[submodule "nitro"]
+	path = nitro
+	url = https://github.com/OffchainLabs/nitro.git
