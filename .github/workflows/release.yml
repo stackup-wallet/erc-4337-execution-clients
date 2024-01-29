@@ -27,7 +27,6 @@ jobs:
       - name: Get client version
         run: |
           cd ./${{inputs.client}} && \
-          git fetch --tags && \
           echo "CLIENT_GIT_TAG=$(git describe --tags)" >> $GITHUB_ENV && \
           cd ..
 
