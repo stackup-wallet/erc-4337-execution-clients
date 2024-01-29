@@ -22,6 +22,7 @@ cp $src_tracer_path $dest_tracer_path
 cp $src_arbitrum_extra_path $dest_arbitrum_extra_path
 
 if [ $ONLY_SETUP -eq 0 ]; then
+    echo "No binary builds for nitro implemented..."
     echo "Clean up client directory..."
     cd $client_path
     git reset --hard
