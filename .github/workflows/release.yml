@@ -13,9 +13,7 @@ on:
 
 jobs:
   docker:
-    runs-on:
-      group: erc-4337-execution-clients
-      labels: ubuntu-20.04-32core
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -51,6 +49,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./${{inputs.client}}
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           tags: stackupwallet/${{inputs.client}}:${{env.CLIENT_GIT_TAG}}
