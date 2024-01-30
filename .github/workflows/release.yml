@@ -27,6 +27,15 @@ jobs:
           echo "CLIENT_GIT_TAG=$(git describe --tags)" >> $GITHUB_ENV && \
           cd ..
 
+      # TODO: Ideally we should always build for linux/amd64,linux/arm64. But Arbitrum nitro currently fails with linux/arm64.
+      - name: Set DOCKER_PLATFORMS environment variable
+        run: |
+          if [ "${{ inputs.client }}" != "nitro" ]; then
+            echo "DOCKER_PLATFORMS=linux/amd64" >> $GITHUB_ENV
+          else
+            echo "DOCKER_PLATFORMS=linux/amd64,linux/arm64" >> $GITHUB_ENV
+          fi
+
       - name: Recursively fetch all submodules
         run: git submodule update --init --recursive --force
 
@@ -49,6 +58,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./${{inputs.client}}
-          platforms: linux/amd64
+          platforms: ${{env.DOCKER_PLATFORMS}}
           push: true
           tags: stackupwallet/${{inputs.client}}:${{env.CLIENT_GIT_TAG}}
