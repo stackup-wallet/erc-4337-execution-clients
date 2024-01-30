@@ -15,7 +15,7 @@ jobs:
   docker:
     runs-on:
       group: erc-4337-execution-clients
-      labels: ubuntu-20.04-16core
+      labels: ubuntu-20.04-32core
     steps:
       - name: Checkout
         uses: actions/checkout@v4
