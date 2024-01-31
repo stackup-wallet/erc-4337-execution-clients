@@ -14,9 +14,20 @@ done
 client_path=$(pwd)/base-node
 src_tracer_path=$(pwd)/tracers/bundler_collector.go.template
 dest_tracer_path=${client_path}/bundler_collector.go
+dockerfile_path=${client_path}/Dockerfile
+dockerfile_target_line="RUN go run build\/ci.go install -static \.\/cmd\/geth"
+dockerfile_new_line="COPY bundler_collector.go eth/tracers/native/bundler_collector.go
+"
 
 echo "Copy tracers to relevant client directory..."
 cp $src_tracer_path $dest_tracer_path
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    sed -i '' "/$dockerfile_target_line/i\\
+$dockerfile_new_line" $dockerfile_path
+else
+    sed -i "/$dockerfile_target_line/i $dockerfile_new_line" $dockerfile_path
+fi
 
 if [ $ONLY_SETUP -eq 0 ]; then
     echo "No binary builds for base-node implemented..."
