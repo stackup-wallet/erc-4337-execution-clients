@@ -10,6 +10,7 @@ on:
         options:
           - go-ethereum
           - nitro
+          - base-node
 
 jobs:
   docker:

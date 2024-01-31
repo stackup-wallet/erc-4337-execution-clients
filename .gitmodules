@@ -7,3 +7,6 @@
 [submodule "nitro"]
 	path = nitro
 	url = https://github.com/OffchainLabs/nitro.git
+[submodule "node"]
+	path = base-node
+	url = https://github.com/base-org/node.git
