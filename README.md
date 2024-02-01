@@ -8,6 +8,7 @@ Pre-built docker images are available at the following repositories. The tags co
 
 - [go-ethereum](https://hub.docker.com/r/stackupwallet/go-ethereum/tags)
 - [nitro](https://hub.docker.com/r/stackupwallet/nitro/tags)
+- [op-geth](https://hub.docker.com/r/stackupwallet/op-geth/tags)
 - [base-node](https://hub.docker.com/r/stackupwallet/base-node/tags)
 
 ## Building binaries from source
@@ -37,6 +38,7 @@ Use the following scripts to build a client from source with native ERC-4337 tra
 - `go-ethereum`
 - `bor` (Polygon PoS)
 - `nitro` (Arbitrum)
+- `op-geth` (Optimism)
 - `base-node` (Base)
 
 ```bash

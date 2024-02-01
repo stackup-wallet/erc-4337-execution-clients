@@ -10,3 +10,6 @@
 [submodule "node"]
 	path = base-node
 	url = https://github.com/base-org/node.git
+[submodule "op-geth"]
+	path = op-geth
+	url = https://github.com/ethereum-optimism/op-geth.git
