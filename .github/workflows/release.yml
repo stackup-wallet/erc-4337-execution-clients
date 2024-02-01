@@ -10,6 +10,7 @@ on:
         options:
           - go-ethereum
           - nitro
+          - op-geth
           - base-node
 
 jobs:
