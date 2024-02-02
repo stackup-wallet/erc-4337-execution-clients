@@ -9,7 +9,7 @@ A repository for building Geth and other EVM execution clients with native ERC-4
 | go-ethereum        | `v1.13.11`      | ✅                     | ✅                       |
 | bor (Polygon PoS)  | `v1.2.3`        | ❌                     | ✅                       |
 | nitro (Arbitrum)   | `v2.2.2`        | ✅                     | ❌                       |
-| op-geth (Optimism) | `v1.101305.1`   | ✅                     | ❌                       |
+| op-geth (Optimism) | `v1.101305.3`   | ✅                     | ❌                       |
 | base-node (Base)   | `v0.7.0`        | ✅                     | ❌                       |
 
 ## Pre-built docker images
