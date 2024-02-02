@@ -2,6 +2,16 @@
 
 A repository for building Geth and other EVM execution clients with native ERC-4337 tracers.
 
+## Execution client status
+
+| Client             | Release version | Pre-built docker image | Build binary from source |
+| ------------------ | --------------- | ---------------------- | ------------------------ |
+| go-ethereum        | `v1.13.11`      | ✅                     | ✅                       |
+| bor (Polygon PoS)  | `v1.2.3`        | ❌                     | ✅                       |
+| nitro (Arbitrum)   | `v2.2.2`        | ✅                     | ❌                       |
+| op-geth (Optimism) | `v1.101305.1`   | ✅                     | ❌                       |
+| base-node (Base)   | `v0.6.1`        | ✅                     | ❌                       |
+
 ## Pre-built docker images
 
 Pre-built docker images are available at the following repositories. The tags correlate to the execution client's commit ref that the tracer was compiled with.
@@ -36,10 +46,10 @@ Use the following scripts to build a client from source with native ERC-4337 tra
 `$CLIENT` can be replaced with one of the currently supported execution clients:
 
 - `go-ethereum`
-- `bor` (Polygon PoS)
-- `nitro` (Arbitrum)
-- `op-geth` (Optimism)
-- `base-node` (Base)
+- `bor`
+- `nitro`
+- `op-geth`
+- `base-node`
 
 ```bash
 ./build_scripts/$CLIENT.sh
