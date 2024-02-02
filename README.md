@@ -10,7 +10,7 @@ A repository for building Geth and other EVM execution clients with native ERC-4
 | bor (Polygon PoS)  | `v1.2.3`        | ❌                     | ✅                       |
 | nitro (Arbitrum)   | `v2.2.2`        | ✅                     | ❌                       |
 | op-geth (Optimism) | `v1.101305.1`   | ✅                     | ❌                       |
-| base-node (Base)   | `v0.6.1`        | ✅                     | ❌                       |
+| base-node (Base)   | `v0.7.0`        | ✅                     | ❌                       |
 
 ## Pre-built docker images
 
@@ -37,7 +37,7 @@ git clone --recurse-submodules https://github.com/stackup-wallet/erc-4337-execut
 
 Most clients will require the following system dependencies to successfully compile:
 
-- Go 1.20
+- Go 1.21
 
 ### Running the build scripts
 
