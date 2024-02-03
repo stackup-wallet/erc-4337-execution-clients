@@ -13,3 +13,9 @@
 [submodule "op-geth"]
 	path = op-geth
 	url = https://github.com/ethereum-optimism/op-geth.git
+[submodule "avalanchego"]
+	path = avalanchego
+	url = https://github.com/ava-labs/avalanchego.git
+[submodule "coreth"]
+	path = coreth
+	url = https://github.com/ava-labs/coreth.git

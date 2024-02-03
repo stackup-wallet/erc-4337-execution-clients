@@ -11,6 +11,7 @@ A repository for building Geth and other EVM execution clients with native ERC-4
 | nitro (Arbitrum)   | `v2.2.2`        | ✅                     | ❌                       |
 | op-geth (Optimism) | `v1.101305.3`   | ✅                     | ❌                       |
 | base-node (Base)   | `v0.7.0`        | ✅                     | ❌                       |
+| avalanchego (Avax) | `v1.10.19`      | ❌                     | ✅                       |
 
 ## Pre-built docker images
 
@@ -50,6 +51,7 @@ Use the following scripts to build a client from source with native ERC-4337 tra
 - `nitro`
 - `op-geth`
 - `base-node`
+- `avalanchego`
 
 ```bash
 ./build_scripts/$CLIENT.sh
