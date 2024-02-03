@@ -16,3 +16,6 @@
 [submodule "avalanchego"]
 	path = avalanchego
 	url = https://github.com/ava-labs/avalanchego.git
+[submodule "coreth"]
+	path = coreth
+	url = https://github.com/ava-labs/coreth.git
