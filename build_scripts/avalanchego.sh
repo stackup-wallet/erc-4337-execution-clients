@@ -13,7 +13,7 @@ done
 
 client_path=$(pwd)/avalanchego
 coreth_path=$(pwd)/coreth
-src_tracer_path=$(pwd)/tracers/bundler_collector.go.template
+src_tracer_path=$(pwd)/tracers/bundler_collector_avalanche.go.template
 dest_tracer_path=${coreth_path}/eth/tracers/native/bundler_collector.go
 build_output_dir=$(pwd)/builds/avalanchego/
 
