@@ -4,14 +4,15 @@ A repository for building Geth and other EVM execution clients with native ERC-4
 
 ## Execution client status
 
-| Client             | Release version | Pre-built docker image | Build binary from source |
-| ------------------ | --------------- | ---------------------- | ------------------------ |
-| go-ethereum        | `v1.13.11`      | ✅                     | ✅                       |
-| bor (Polygon PoS)  | `v1.2.3`        | ❌                     | ✅                       |
-| nitro (Arbitrum)   | `v2.2.2`        | ✅                     | ❌                       |
-| op-geth (Optimism) | `v1.101305.3`   | ✅                     | ❌                       |
-| base-node (Base)   | `v0.7.0`        | ✅                     | ❌                       |
-| avalanchego (Avax) | `v1.10.19`      | ❌                     | ✅                       |
+| Client                    | Release version | Pre-built docker image | Build binary from source |
+| ------------------------- | --------------- | ---------------------- | ------------------------ |
+| go-ethereum               | `v1.13.11`      | ✅                     | ✅                       |
+| bor (Polygon PoS)         | `v1.2.3`        | ❌                     | ✅                       |
+| nitro (Arbitrum)          | `v2.2.2`        | ✅                     | ❌                       |
+| op-geth (Optimism)        | `v1.101305.3`   | ✅                     | ❌                       |
+| base-node (Base)          | `v0.7.0`        | ✅                     | ❌                       |
+| bsc (Binance Smart Chain) | `v1.3.8`        | ❌                     | ✅                       |
+| avalanchego (Avax)        | `v1.10.19`      | ❌                     | ✅                       |
 
 ## Pre-built docker images
 
@@ -51,6 +52,7 @@ Use the following scripts to build a client from source with native ERC-4337 tra
 - `nitro`
 - `op-geth`
 - `base-node`
+- `bsc`
 - `avalanchego`
 
 ```bash

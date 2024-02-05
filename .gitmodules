@@ -19,3 +19,6 @@
 [submodule "coreth"]
 	path = coreth
 	url = https://github.com/ava-labs/coreth.git
+[submodule "bsc"]
+	path = bsc
+	url = https://github.com/bnb-chain/bsc.git
