@@ -1,4 +1,6 @@
-# ERC-4337 Execution Clients
+![](https://i.imgur.com/cRzNXX4.png)
+
+# Getting started
 
 A repository for building Geth and other EVM execution clients with native ERC-4337 tracers.
 
