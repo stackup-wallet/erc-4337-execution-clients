@@ -17,3 +17,14 @@ func (*bundlerCollector) CaptureArbitrumTransfer(
 }
 func (*bundlerCollector) CaptureArbitrumStorageGet(key common.Hash, depth int, before bool)        {}
 func (*bundlerCollector) CaptureArbitrumStorageSet(key, value common.Hash, depth int, before bool) {}
+
+func (*bundlerExecutor) CaptureArbitrumTransfer(
+	env *vm.EVM,
+	from, to *common.Address,
+	value *big.Int,
+	before bool,
+	purpose string,
+) {
+}
+func (*bundlerExecutor) CaptureArbitrumStorageGet(key common.Hash, depth int, before bool)        {}
+func (*bundlerExecutor) CaptureArbitrumStorageSet(key, value common.Hash, depth int, before bool) {}

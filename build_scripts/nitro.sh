@@ -12,13 +12,16 @@ do
 done
 
 client_path=$(pwd)/nitro/go-ethereum
-src_tracer_path=$(pwd)/tracers/bundler_collector.go.template
+src_collector_tracer_path=$(pwd)/tracers/bundler_collector.go.template
+src_executor_tracer_path=$(pwd)/tracers/bundler_executor.go.template
 src_arbitrum_extra_path=$(pwd)/tracers/bundler_tracer_arbitrum.go.template
-dest_tracer_path=${client_path}/eth/tracers/native/bundler_collector.go
+dest_collector_tracer_path=${client_path}/eth/tracers/native/bundler_collector.go
+dest_executor_tracer_path=${client_path}/eth/tracers/native/bundler_executor.go
 dest_arbitrum_extra_path=${client_path}/eth/tracers/native/bundler_tracer_arbitrum.go
 
 echo "Copy tracers to relevant client directory..."
-cp $src_tracer_path $dest_tracer_path
+cp $src_collector_tracer_path $dest_collector_tracer_path
+cp $src_executor_tracer_path $dest_executor_tracer_path
 cp $src_arbitrum_extra_path $dest_arbitrum_extra_path
 
 if [ $ONLY_SETUP -eq 0 ]; then
