@@ -12,11 +12,14 @@ do
 done
 
 client_path=$(pwd)/op-geth
-src_tracer_path=$(pwd)/tracers/bundler_collector.go.template
-dest_tracer_path=${client_path}/eth/tracers/native/bundler_collector.go
+src_collector_tracer_path=$(pwd)/tracers/bundler_collector.go.template
+src_executor_tracer_path=$(pwd)/tracers/bundler_executor.go.template
+dest_collector_tracer_path=${client_path}/eth/tracers/native/bundler_collector.go
+dest_executor_tracer_path=${client_path}/eth/tracers/native/bundler_executor.go
 
 echo "Copy tracers to relevant client directory..."
-cp $src_tracer_path $dest_tracer_path
+cp $src_collector_tracer_path $dest_collector_tracer_path
+cp $src_executor_tracer_path $dest_executor_tracer_path
 
 if [ $ONLY_SETUP -eq 0 ]; then
     echo "No binary builds for op-geth implemented..."

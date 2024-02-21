@@ -1,3 +1,5 @@
 package native
 
 func (*bundlerCollector) CaptureSystemTxEnd(intrinsicGas uint64) {}
+
+func (*bundlerExecutor) CaptureSystemTxEnd(intrinsicGas uint64) {}

@@ -13,12 +13,15 @@ done
 
 client_path=$(pwd)/avalanchego
 coreth_path=$(pwd)/coreth
-src_tracer_path=$(pwd)/tracers/bundler_collector_avalanche.go.template
-dest_tracer_path=${coreth_path}/eth/tracers/native/bundler_collector.go
+src_collector_tracer_path=$(pwd)/tracers/bundler_collector_avalanche.go.template
+src_executor_tracer_path=$(pwd)/tracers/bundler_executor_avalanche.go.template
+dest_collector_tracer_path=${coreth_path}/eth/tracers/native/bundler_collector.go
+dest_executor_tracer_path=${coreth_path}/eth/tracers/native/bundler_executor.go
 build_output_dir=$(pwd)/builds/avalanchego/
 
 echo "Copy tracers to relevant client directory..."
-cp $src_tracer_path $dest_tracer_path
+cp $src_collector_tracer_path $dest_collector_tracer_path
+cp $src_executor_tracer_path $dest_executor_tracer_path
 
 echo "Initialize local coreth directory..."
 cd $coreth_path
