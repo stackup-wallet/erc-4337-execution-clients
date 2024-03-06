@@ -14,7 +14,7 @@ A repository for building Geth and other EVM execution clients with native ERC-4
 | op-geth (Optimism)        | `v1.101308.1`   | ✅                     | ❌                       |
 | base-node (Base)          | `v0.7.1`        | ✅                     | ❌                       |
 | bsc (Binance Smart Chain) | `v1.3.8`        | ❌                     | ✅                       |
-| avalanchego (Avax)        | `v1.10.19`      | ❌                     | ✅                       |
+| avalanchego (Avax)        | `v1.11.2`       | ❌                     | ✅                       |
 
 ## Pre-built docker images
 
