@@ -17,6 +17,8 @@ func (*bundlerCollector) CaptureArbitrumTransfer(
 }
 func (*bundlerCollector) CaptureArbitrumStorageGet(key common.Hash, depth int, before bool)        {}
 func (*bundlerCollector) CaptureArbitrumStorageSet(key, value common.Hash, depth int, before bool) {}
+func (*bundlerCollector) CaptureStylusHostio(name string, args, outs []byte, startInk, endInk uint64) {
+}
 
 func (*bundlerExecutor) CaptureArbitrumTransfer(
 	env *vm.EVM,
@@ -28,3 +30,5 @@ func (*bundlerExecutor) CaptureArbitrumTransfer(
 }
 func (*bundlerExecutor) CaptureArbitrumStorageGet(key common.Hash, depth int, before bool)        {}
 func (*bundlerExecutor) CaptureArbitrumStorageSet(key, value common.Hash, depth int, before bool) {}
+func (*bundlerExecutor) CaptureStylusHostio(name string, args, outs []byte, startInk, endInk uint64) {
+}
