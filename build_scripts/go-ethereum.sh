@@ -12,9 +12,9 @@ do
 done
 
 client_path=$(pwd)/go-ethereum
-src_collector_tracer_path=$(pwd)/tracers/bundler_collector.go.template
+src_collector_tracer_path=$(pwd)/tracers/bundler_collector_next.go.template
 src_executor_tracer_path=$(pwd)/tracers/bundler_executor.go.template
-dest_collector_tracer_path=${client_path}/eth/tracers/native/bundler_collector.go
+dest_collector_tracer_path=${client_path}/eth/tracers/native/bundler_collector_next.go
 dest_executor_tracer_path=${client_path}/eth/tracers/native/bundler_executor.go
 build_output_dir=$(pwd)/builds/go-ethereum/
 
