@@ -14,9 +14,10 @@ done
 client_path=$(pwd)/base-node
 src_collector_tracer_path=$(pwd)/tracers/bundler_collector.go.template
 src_executor_tracer_path=$(pwd)/tracers/bundler_executor.go.template
-dest_collector_tracer_path=${client_path}/geth/bundler_collector.go
-dest_executor_tracer_path=${client_path}/geth/bundler_executor.go
-dockerfile_path=${client_path}/geth/Dockerfile
+dest_collector_tracer_path=${client_path}/bundler_collector.go
+dest_executor_tracer_path=${client_path}/bundler_executor.go
+src_dockerfile_path=${client_path}/geth/Dockerfile
+dockerfile_path=${client_path}/Dockerfile
 dockerfile_target_line="RUN go run build\/ci.go install -static \.\/cmd\/geth"
 dockerfile_collector_new_line="COPY bundler_collector.go eth/tracers/native/bundler_collector.go
 "
@@ -26,6 +27,7 @@ dockerfile_executor_new_line="COPY bundler_executor.go eth/tracers/native/bundle
 echo "Copy tracers to relevant client directory..."
 cp $src_collector_tracer_path $dest_collector_tracer_path
 cp $src_executor_tracer_path $dest_executor_tracer_path
+cp $src_dockerfile_path $dockerfile_path
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS
     sed -i '' "/$dockerfile_target_line/i\\
