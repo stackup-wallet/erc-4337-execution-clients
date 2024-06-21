@@ -14,9 +14,9 @@ done
 client_path=$(pwd)/base-node
 src_collector_tracer_path=$(pwd)/tracers/bundler_collector.go.template
 src_executor_tracer_path=$(pwd)/tracers/bundler_executor.go.template
-dest_collector_tracer_path=${client_path}/bundler_collector.go
-dest_executor_tracer_path=${client_path}/bundler_executor.go
-dockerfile_path=${client_path}/Dockerfile
+dest_collector_tracer_path=${client_path}/geth/bundler_collector.go
+dest_executor_tracer_path=${client_path}/geth/bundler_executor.go
+dockerfile_path=${client_path}/geth/Dockerfile
 dockerfile_target_line="RUN go run build\/ci.go install -static \.\/cmd\/geth"
 dockerfile_collector_new_line="COPY bundler_collector.go eth/tracers/native/bundler_collector.go
 "

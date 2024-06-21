@@ -40,6 +40,14 @@ jobs:
             echo "DOCKER_PLATFORMS=linux/amd64" >> $GITHUB_ENV
           fi
 
+      - name: Set DOCKER_BUILD_CONTEXT environment variable
+        run: |
+          if [ "${{ inputs.client }}" == "base-node" ]; then
+            echo "DOCKER_BUILD_CONTEXT=./${{ inputs.client }}/geth" >> $GITHUB_ENV
+          else
+            echo "DOCKER_BUILD_CONTEXT=./${{ inputs.client }}" >> $GITHUB_ENV
+          fi
+
       - name: Recursively fetch all submodules
         run: git submodule update --init --recursive --force
 
@@ -61,7 +69,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./${{inputs.client}}
+          context: ${{env.DOCKER_BUILD_CONTEXT}}
           platforms: ${{env.DOCKER_PLATFORMS}}
           push: true
           tags: stackupwallet/${{inputs.client}}:${{env.CLIENT_GIT_TAG}}
